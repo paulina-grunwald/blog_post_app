@@ -4,4 +4,4 @@ const rootReducer = combineReducers({
   state: (state = {}) => state
 })
 
-export default rootReducer
+export default rootReducer 
