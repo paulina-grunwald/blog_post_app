@@ -8,3 +8,18 @@
 > npm install
 > npm start
 ```
+
+### Redux Blog Post API Reference
+
+http://reduxblog.herokuapp.com/
+
+Post example:
+
+```javascript
+{
+  id: 1,
+  title: 'Hi!',
+  categories: 'Computer, Friends',
+  content: 'Blog post content'
+}
+```
