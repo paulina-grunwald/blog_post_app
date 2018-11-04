@@ -3,22 +3,34 @@ import { Field, reduxForm } from 'redux-form'
 // Field is a react componed wired into redux-form
 class NewPosts extends Component {
   renderField (field) {
+    const { meta: { touched, error } } = field
+    const className = `form-group ${touched && error ? 'has-danger' : ''}`
     return (
-      <div className='form-group'>
+      <div className={className}>
         <label>{field.label}</label>
         <input
           className='form-control'
           type='text'
           {...field.input}
         />
+        <div className='text-help'>
+
+          {touched ? error : ''}
+        </div>
       </div>
 
     )
   }
 
+  onSubmit (values) {
+    // this===component
+    console.log(values)
+  }
+
   render () {
+    const { handleSubmit } = this.props
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label='Title'
           name='title'
@@ -34,6 +46,9 @@ class NewPosts extends Component {
           name='content'
           component={this.renderField}
         />
+        <button type='submit' className='btn btn-primary'>
+          Submit
+        </button>
       </form>
 
     )
@@ -48,10 +63,10 @@ function validate (values) {
     errors.title = 'Enter a title!'
   }
   if (!values.tags) {
-    errors.title = 'Enter a tags!'
+    errors.tags = 'Enter a tags!'
   }
   if (!values.content) {
-    errors.title = 'Enter post content'
+    errors.content = 'Enter post content'
   }
 
   // If errors is an empty object, the form is ready to submit
