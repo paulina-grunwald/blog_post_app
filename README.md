@@ -4,7 +4,7 @@
 
 ```
 > git clone https://github.com/paulina-grunwald/blog_post_app.git
-> cd ReduxSimpleStarter
+> cd blog_post_app
 > npm install
 > npm start
 ```
@@ -23,3 +23,7 @@ Post example:
   content: 'Blog post content'
 }
 ```
+
+### Resources 
+- [Modern React with Redux](https://www.udemy.com/react-redux/)
+-[Redux Form](https://redux-form.com/7.4.2/)
