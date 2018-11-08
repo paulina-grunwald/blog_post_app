@@ -11,7 +11,7 @@
 
 ### Redux Blog Post API Reference
 
-http://reduxblog.herokuapp.com/
+[Redux Blog Post API Reference](http://reduxblog.herokuapp.com/). ALL requests require a key parameter, eg `reduxblog.herokuapp.com/api/posts?key=123`
 
 Post example:
 
@@ -26,4 +26,4 @@ Post example:
 
 ### Resources 
 - [Modern React with Redux](https://www.udemy.com/react-redux/)
--[Redux Form](https://redux-form.com/7.4.2/)
+- [Redux Form](https://redux-form.com/7.4.2/)

@@ -17,7 +17,6 @@ class NewPosts extends Component {
           {...field.input}
         />
         <div className='text-help'>
-
           {touched ? error : ''}
         </div>
       </div>
